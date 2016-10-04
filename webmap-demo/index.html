@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Create HTML from JSON</title>
+        <meta name="description" content="Demonstration of using GeoJSON data in a web map.  Part of the Introduction to GeoJSON presentation given at Central PA GIS Day 2016.">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+
+        <!-- Place favicon.ico in the root directory -->
+        
+        <!-- Normalize -->
+        <link rel="stylesheet" type="text/css" href="../assets/css/normalize.css" />
+        <!-- Leaflet -->
+        <link rel="stylesheet" href="//unpkg.com/leaflet@1.0.1/dist/leaflet.css" />
+        <!-- Leaflet Zoom Home -->
+        <link rel="stylesheet" href="assets/js/leaflet.zoomhome/leaflet.zoomhome.css" />        
+        <!-- Page Styles -->
+        <link rel="stylesheet" type="text/css" href="../assets/css/webmap-style.css" />   
+        
+        <!-- Font Awesome -->
+        <script src="//use.fontawesome.com/fb6bc9cb24.js"></script>        
+    </head>
+    <body>
+        <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        <section id="map"></section>        
+        <!-- Leaflet -->
+        <script src="////unpkg.com/leaflet@1.0.1/dist/leaflet.js"></script>
+        <!-- Leaflet Zoom Home -->
+        <script src="assets/js/leaflet.zoomhome/leaflet.zoomhome.min.js"></script>
+        <!-- Get GeoJSON module -->
+        <script src="../assets/js/getGeoJson.js"></script>
+        <!-- Map App -->
+        <script src="../assets/js/mapApp.js"></script>        
+    </body>
+</html>
