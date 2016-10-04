@@ -6,14 +6,15 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          0,
-          0
+          40.270003,
+          -76.888058
         ]
       },
       "properties": {
         "name": "Broad Street Market",
         "address": "1233 N 3rd St, Harrisburg, PA 17102",
-        "website": "http://www.broadstreetmarket.org/"
+        "website": "http://www.broadstreetmarket.org/",
+        "group": "sites"
       }
     },
     {
@@ -21,14 +22,15 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          0,
-          0
+          -76.891521,
+          40.271725
         ]
       },
       "properties": {
         "name": "Zeroday Brewing Co.",
         "address": "250 Reily St #103, Harrisburg, PA 17102",
-        "website": "http://www.zerodaybrewing.com/"
+        "website": "http://www.zerodaybrewing.com/",
+        "group": "sites"
       }
     },
     {
@@ -36,14 +38,15 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          0,
-          0
+          -76.889311,
+          40.269676
         ]
       },
       "properties": {
         "name": "Midtown Scholar Bookstore",
         "address": "1302 N 3rd St, Harrisburg, PA 17102",
-        "website": "http://www.midtownscholar.com"
+        "website": "http://www.midtownscholar.com",
+        "group": "sites"
       }
     },
     {
@@ -164,7 +167,8 @@
       "properties": {
         "name": "Italian Lake",
         "address": "3rd and Division Streets",
-        "neighborhood": "Uptown"
+        "neighborhood": "Uptown",
+        "group": "parks"
       }
     },
     {
@@ -193,7 +197,8 @@
       "properties": {
         "name": "Penn and Sayford Park",
         "address": "Penn and Sayford Streets",
-        "neighborhood": "Midtown"
+        "neighborhood": "Midtown",
+        "group": "parks"
       }
     },
     {
@@ -222,7 +227,8 @@
       "properties": {
         "name": "Sunken Gardens",
         "address": "1210 N Front St",
-        "neighborhood": "Midtown"
+        "neighborhood": "Midtown",
+        "group": "parks"
       }
     }
   ]
