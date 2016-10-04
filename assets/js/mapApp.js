@@ -8,7 +8,7 @@ var mapboxEmerald;
 var midtownSitesParks;
 var mapboxKey = 'pk.eyJ1IjoicG1ja2lubmV5IiwiYSI6ImNpa3NpNTlyNDBlcG51cm0xcG9kd3Z2ZGoifQ.9mtNv6FNVl8c1bd7Kqud_Q';
 var geoJsonUrl = '//raw.githubusercontent.com/pmacMaps/intro-geojson-gis-day-2016/master/midtownSitesParks.geojson';
-var geoJsonData = getGeoJson(geoJsonUrl);
+
 
 /*** Map & Controls ***/
 var map = L.map('map', {
@@ -25,5 +25,7 @@ mapboxEmerald = L.tileLayer('//api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?acce
 	accessToken: mapboxKey
 }).addTo(map);
 
-midtownSitesParks = L.geoJson(geoJsonData).addTo(map);
+midtownSitesParks = new L.GeoJSON.AJAX(geoJsonUrl).addTo(map);
+
+
 

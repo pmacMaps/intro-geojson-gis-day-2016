@@ -8,7 +8,8 @@ function getGeoJson(geoJson) {
     geoJsonRequest.onreadystatechange = function(data) {
         if (geoJsonRequest.readyState === 4) {
             if (geoJsonRequest.status === 200) {
-                var geoJsonData = JSON.parse(geoJsonRequest.responseText);
+                //var geoJsonData = JSON.parse(geoJsonRequest.responseText);
+                var geoJsonData = geoJsonRequest.responseText;
                 // return data for use in web map
                 return geoJsonData;
               } else {

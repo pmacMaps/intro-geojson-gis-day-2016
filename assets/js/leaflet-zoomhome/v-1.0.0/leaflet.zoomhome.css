@@ -1,0 +1,13 @@
+.leaflet-control-zoomhome a {
+    font: bold 18px "Lucida Console",Monaco,monospace;
+}
+
+leaflet-control-zoomhome a:hover {
+    background-color: #f3f3f3;
+}
+
+a.leaflet-control-zoomhome-in,
+a.leaflet-control-zoomhome-out {
+  font-size: 1.5em;
+  line-height: 1.65 !important;
+}
