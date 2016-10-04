@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Create HTML from JSON</title>
+        <meta name="description" content="Demonstration of adding HTML content from a JSON file.  Part of the Introduction to GeoJSON presentation given at Central PA GIS Day 2016.">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Place favicon.ico in the root directory -->
+        
+        <!-- Normalize -->
+        <link rel="stylesheet" type="text/css" href="../assets/css/normalize.css" />
+        <!-- Page Styles -->
+        <link rel="stylesheet" type="text/css" href="../assets/css/json-demo-style.css" />        
+        
+    </head>
+    <body>
+        <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        <section class="wrap">
+            <h1>Create HTML Content from JSON File</h1>
+            <!-- clicking this button will run the code to process the JSON to HTML content -->
+            <a id="demo" class="btn" href="#">See Harrisburg Sites & Parks</a>
+            <hr />
+            <!-- JSON content will be processed as html content -->
+            <section id="hgbSites"></section>
+            <section id="hgbParks"></section>
+        </section>
+        <!-- Script to convert JSON to HTML -->
+        <script src="../assets/js/jsonToHtml.js"></script>
+    </body>
+</html>
