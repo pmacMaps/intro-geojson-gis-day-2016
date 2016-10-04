@@ -1,0 +1,36 @@
+{
+  "sites": [
+    {
+      "name": "Broad Street Market",
+      "address": "1233 N 3rd St, Harrisburg, PA 17102",
+      "website": "http://www.broadstreetmarket.org/"
+    },
+    {
+      "name": "Zeroday Brewing Co.",
+      "address": "250 Reily St #103, Harrisburg, PA 17102",
+      "website": "http://www.zerodaybrewing.com/"
+    },
+    {
+      "name": "Midtown Scholar Bookstore",
+      "address": "1302 N 3rd St, Harrisburg, PA 17102",
+      "website": "http://www.midtownscholar.com/"
+    }
+  ],
+  "parks": [
+    {
+      "name": "Italian Lake",
+      "address": "3rd and Division Streets",
+      "neighborhood": "Uptown"
+    },
+    {
+      "name": "Italian Lake",
+      "address": "3rd and Division Streets",
+      "neighborhood": "Uptown"
+    },
+    {
+      "name": "Sunken Gardens",
+      "address": "1210 N Front St",
+      "neighborhood": "Midtown"
+    }
+  ]
+}
