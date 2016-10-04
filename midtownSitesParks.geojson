@@ -6,8 +6,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          40.270003,
-          -76.888058
+          -76.888058,
+          40.270003          
         ]
       },
       "properties": {
@@ -53,7 +53,7 @@
       "type": "Feature",
       "geometry": {
         "type": "Polygon",
-        "coordinates": [
+        "coordinates": [[
           [
             -76.901736,
             40.291271
@@ -162,7 +162,7 @@
             -76.899578,
             40.291379
           ]
-        ]
+        ]]
       },
       "properties": {
         "name": "Italian Lake",
@@ -175,7 +175,7 @@
       "type": "Feature",
       "geometry": {
         "type": "Polygon",
-        "coordinates": [
+        "coordinates": [[
           [
             -76.891393,
             40.269612
@@ -192,7 +192,7 @@
             -76.891201,
             40.269344
           ]
-        ]
+        ]]
       },
       "properties": {
         "name": "Penn and Sayford Park",
@@ -205,7 +205,7 @@
       "type": "Feature",
       "geometry": {
         "type": "Polygon",
-        "coordinates": [
+        "coordinates": [[
           [
             -76.893058,
             40.267763
@@ -222,7 +222,7 @@
             -76.89248,
             40.266989
           ]
-        ]
+        ]]
       },
       "properties": {
         "name": "Sunken Gardens",
