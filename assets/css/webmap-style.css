@@ -1,3 +1,4 @@
+/*** General Settings ***/
 html,
 body,
 #map {
@@ -12,4 +13,25 @@ a {
 
 a:hover {
   text-decoration: underline;
+}
+
+/*** Tool Tip ***/
+.feat-tooltip {
+    font-weight: bold;
+}
+
+/*** Popup ***/
+.feat-popup {
+    font-size: 1.05em;
+    /* font-family*/
+}
+
+.feat-popup h3 {
+    font-size: 1.25em;
+    text-align: center;
+}
+
+.feat-popup hr {
+    width: 80%;
+    border-color: #aaa;
 }
