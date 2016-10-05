@@ -38,7 +38,6 @@ mapboxEmerald = L.tileLayer('//api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?acce
 
 // Icon for Sites
 sitesIcon = L.icon({
-    //iconUrl: '../../assets/media/store-flaticon.png',
     iconUrl: '../../assets/media/fa-check-square-orange.png',
     iconSize: [25,25]
 });
@@ -49,7 +48,6 @@ harrisburgSitesParks = new L.GeoJSON.AJAX(geoJsonUrl, {
     pointToLayer: function(geoJsonPoint, latlng) {
        return L.marker(latlng, {
            icon: sitesIcon,
-           //alt: 'artist rendering of storefront'
            alt: 'square with a check mark in the center'
        });
     },
@@ -63,6 +61,10 @@ harrisburgSitesParks = new L.GeoJSON.AJAX(geoJsonUrl, {
 }).addTo(map);
 
 // Add Tooltip to Sites and Parks
+// add in conditional that if device is a touch device the tool-tip does not happen
+harrisburgSitesParks.bindTooltip(function(evt) {
+   return L.Util.template('<span class="feat-tooltip">{name}</span>', evt.feature.properties); 
+}, {opacity: 1, interactive: true});
 
 // Add popup to Sites and Parks
 harrisburgSitesParks.bindPopup(function(evt) {
