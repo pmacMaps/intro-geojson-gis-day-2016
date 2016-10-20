@@ -38,7 +38,7 @@ mapboxEmerald = L.tileLayer('//api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?acce
 
 // Icon for Sites
 sitesIcon = L.icon({
-    iconUrl: '../media/fa-check-square-orange.png',
+    iconUrl: '//github.com/pmacMaps/intro-geojson-gis-day-2016/blob/gh-pages/assets/media/fa-check-square-orange.png',
     iconSize: [25,25]
 });
 
