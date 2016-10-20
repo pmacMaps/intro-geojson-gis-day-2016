@@ -38,7 +38,7 @@ mapboxEmerald = L.tileLayer('//api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?acce
 
 // Icon for Sites
 sitesIcon = L.icon({
-    iconUrl: '../../assets/media/fa-check-square-orange.png',
+    iconUrl: '../media/fa-check-square-orange.png',
     iconSize: [25,25]
 });
 
