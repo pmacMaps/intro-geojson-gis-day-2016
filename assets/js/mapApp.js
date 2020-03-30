@@ -3,7 +3,7 @@
 /*** Variables ***/
 var map;
 var homeCoords =[40.28208, -76.89215];
-var initZoom = 15;
+var initZoom = 14;
 var zoomHomeControl;
 var osm;
 var harrisburgSitesParks;
