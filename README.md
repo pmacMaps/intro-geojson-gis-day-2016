@@ -4,7 +4,7 @@ This repository includes the presentation, sample JSON file, and sample geoJSON 
 
 * [Presentation](https://pmacmaps.github.io/intro-geojson-gis-day-2016/assets/Intro-to-GeoJSON.pdf) (pdf)
 * [Harrisburg Sites & Parks JSON file](https://pmacmaps.github.io/intro-geojson-gis-day-2016/assets/data/midtown-sites.json)
-* [Harrisburg Sites & Parks geoJSON file]((https://pmacmaps.github.io/intro-geojson-gis-day-2016/assets/data/midtown-sites-parks.geojson)
+* [Harrisburg Sites & Parks geoJSON file](https://pmacmaps.github.io/intro-geojson-gis-day-2016/assets/data/midtown-sites-parks.geojson)
 
 The live demos from the session can be found at the following [website](https://pmacmaps.github.io/intro-geojson-gis-day-2016/ "Live Demo").
 
