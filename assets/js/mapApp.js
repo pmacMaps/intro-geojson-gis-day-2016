@@ -1,25 +1,19 @@
 'use strict'
 
-/*** Variables ***/
-var map;
-var homeCoords =[40.28208, -76.89215];
-var initZoom = 14;
-var zoomHomeControl;
-var osm;
-var harrisburgSitesParks;
-var sitesIcon;
-var geoJsonUrl = './../assets/data/midtown-sites-parks.geojson';
-
+/* set variables */
+const homeCoords =[40.28208, -76.89215];
+const initZoom = 14;
+const geoJsonUrl = './../assets/data/midtown-sites-parks.geojson';
 
 /*** Map & Controls ***/
-map = L.map('map', {
+const map = L.map('map', {
     center: homeCoords,
     zoom: initZoom,
     zoomControl: false
 });
 
 // Zoom Home Control
-zoomHomeControl = L.Control.zoomHome({
+const zoomHomeControl = L.Control.zoomHome({
     position: 'topleft',
     zoomHomeTitle: 'Full map extent',
     homeCoordinates: homeCoords,
@@ -27,18 +21,18 @@ zoomHomeControl = L.Control.zoomHome({
 }).addTo(map);
 
 /*** Layers ***/
-osm = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+const osm = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
          attribution: '&copy; <a href="https://openstreetmap.org/copyright">OpenStreetMap contributors</a>'
       }).addTo(map);
 
 // Icon for Sites
-sitesIcon = L.icon({
+const sitesIcon = L.icon({
     iconUrl: './../assets/media/fa-check-square-orange.png',
     iconSize: [25,25]
 });
 
 // Sites and Parks
-harrisburgSitesParks = new L.GeoJSON.AJAX(geoJsonUrl, {
+const harrisburgSitesParks = new L.GeoJSON.AJAX(geoJsonUrl, {
     // Style point features
     pointToLayer: function(geoJsonPoint, latlng) {
        return L.marker(latlng, {
@@ -65,7 +59,7 @@ harrisburgSitesParks.bindTooltip(function(evt) {
 harrisburgSitesParks.bindPopup(function(evt) {
     // popup for Sites
     if (evt.feature.properties.group === 'sites') {
-        var popupContentSites = '<div class="feat-popup">';
+        let popupContentSites = '<div class="feat-popup">';
         popupContentSites += '<h3>{name}</h3><hr />';
         popupContentSites += '<p>This fine establishment is located at {address}.</p>';
         popupContentSites += '<p>You can visit their <a href="{website}" target="_blank" rel="noopener noreferrer">website</a> for more information.</p>';
@@ -74,7 +68,7 @@ harrisburgSitesParks.bindPopup(function(evt) {
         return L.Util.template(popupContentSites, evt.feature.properties);
     } // popup for Parks
       else if (evt.feature.properties.group === 'parks') {
-        var popupContentParks = '<div class="feat-popup">';
+        let popupContentParks = '<div class="feat-popup">';
         popupContentParks += '<h3>{name}</h3><hr />';
         popupContentParks += '<p>This park is located at {address}, in the {neighborhood} neighborhood.</p>';
         popupContentParks += '</div>';
