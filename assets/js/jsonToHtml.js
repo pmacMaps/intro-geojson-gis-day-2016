@@ -1,77 +1,45 @@
-(function jsonToHtml() {
-    'use strict';
+'use strict';
 
-    var hgbSitesElement = document.getElementById("hgbSites");
-    var hgbParksElement = document.getElementById("hgbParks");
+// elements to write json data into
+const hgbSitesElement = document.getElementById("hgbSites");
+const hgbParksElement = document.getElementById("hgbParks");
+// element to click on page to fetch json data, and create html mark-up from json data
+const button = document.getElementById('demo');
+// Location of JSON file
+const harrisburgSitesURL = './../assets/data/midtown-sites.json';
 
-    /*** Code for GET request for JSON file ***/
+// click on button, and execute code
+button.addEventListener('click', function() {
+  // print message to console
+  console.log('event fired');
 
-    // Location of JSON file
-    var harrisburgSitesURL = './../assets/data/midtown-sites.json';
-
-    // Create an XMLHttpRequest
-    // request will be sent when Run Demo button is clicked
-    var jsonRequest = new XMLHttpRequest();
-
-    // request will cycle through states
-    // once the request is complete, the JSON will be processed and converted to HTML elements
-    // if there was an error getting the data, the error message will be logged in the console
-    function processJSON(request) {
-        request.onreadystatechange = function(data) {
-            if (request.readyState === 4) {
-              if (request.status === 200) {
-                var harrisburgSites = JSON.parse(request.responseText);
-
-                var hgbSitesHTML = '';
-                var hgbParksHTML = '';
-
-                for (var i=0; i < harrisburgSites.sites.length; i++ ) {
-                    hgbSitesHTML += '<div class="hbg-site">';
-                    hgbSitesHTML += '<h3>' + harrisburgSites.sites[i].name + '</h3>';
-                    hgbSitesHTML += '<p>Located at ' + harrisburgSites.sites[i].address + '.</p>';
-                    hgbSitesHTML += '<p>Visit our <a href="' + harrisburgSites.sites[i].website + '" target="_blank">website</a>.</p>';
-                    hgbSitesHTML += '</div>';
-                }
-
-                for (var i=0; i < harrisburgSites.parks.length; i++ ) {
-                    hgbParksHTML += '<div class="hbg-site">';
-                    hgbParksHTML += '<h3>' + harrisburgSites.parks[i].name + '</h3>';
-                    hgbParksHTML += '<p>The park is located at ' + harrisburgSites.parks[i].address;
-                    hgbParksHTML += ' in the ' + harrisburgSites.parks[i].neighborhood + ' neighborhood.</p>';
-                    hgbParksHTML += '</div>';
-                }
-
-                hgbSitesElement.innerHTML = hgbSitesHTML;
-                hgbParksElement.innerHTML = hgbParksHTML;
-
-            } else {
-                    // add error message to span
-                var err = request.statusText + ' (' + request.status + ')';
-                console.log(err);
-              } // end status !== 200 condition
-            } // end status === 4 condition
-        } // end request ready state event
+  // request json data
+  fetch(harrisburgSitesURL)
+  .then((response) => response.json())
+  .then((data) => {
+    // container for html markup
+    let sitesHtmlContent = '';
+    // write "Sites" data to HTML
+    for (const element of data.sites) {
+      sitesHtmlContent += '<div class="hbg-site">';
+      sitesHtmlContent += `<h3>${element.name}</h3>`;
+      sitesHtmlContent += `<p>Located at ${element.address}.</p>`;
+      sitesHtmlContent += `<p>Visit our <a href="${element.website}" target="_blank" rel="noopener noreferrer">website</a>.</p>`;
+      sitesHtmlContent += '</div>';
     }
-
-    // Open and Send XMLHttpRequest by passing in URL of JSON file
-    // function is tied to click event of Run Demo button
-    function requestJSON(json) {
-      if (!hgbSitesElement.innerHTML && !hgbParksElement.innerHTML) {
-        jsonRequest.open('GET', json);
-        jsonRequest.send();
-        processJSON(jsonRequest);
-      } else {
-        console.log('JSON request not sent');
-        console.log('HTML content for Sites already exists');
-        console.log('HTML content for Parks already exists');
-        // place messages in element the display is changed from hidden to shown
-      }
-}
-
-    var button = document.getElementById('demo');
-
-    button.addEventListener('click', function() {
-      console.log('event fired');
-      requestJSON(harrisburgSitesURL);
-    });
-})()
+    // set HTML content on webpage for "Sites" area
+    hgbSitesElement.innerHTML = sitesHtmlContent;
+    // container for html markup
+    let parksHtmlContent = '';
+    // write "Parks" data to HTML
+    for (const element of data.parks) {
+      parksHtmlContent += '<div class="hbg-site">';
+      parksHtmlContent += `<h3>${element.name}</h3>`;
+      parksHtmlContent += `<p>The park is located at ${element.address};`;
+      parksHtmlContent += ` in the ${element.neighborhood} neighborhood.</p>`;
+      parksHtmlContent += '</div>';
+    }
+    // set HTML content on webpage for "Parks" area
+    hgbParksElement.innerHTML = parksHtmlContent;
+  })
+});
