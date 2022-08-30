@@ -9,3 +9,5 @@ This repository includes the presentation, sample JSON file, and sample geoJSON 
 The live demos from the session can be found at the following [website](https://pmacmaps.github.io/intro-geojson-gis-day-2016/ "Live Demo").
 
 If you're interested in the code used to create the two demos, then please visit the [gh-pages](https://github.com/pmacMaps/intro-geojson-gis-day-2016/tree/gh-pages "Github Pages Branch") branch of this repository.  
+
+*the JavaScript code has been updated to use ES6 style*
